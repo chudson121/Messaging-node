@@ -1,20 +1,22 @@
 {
-  "name": "nodejs-twilio-api-main",
-  "version": "1.0.0",
-  "description": "Integrating twilio API with Nodejs for sending messages to mobile number.",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.8.7",
-    "express": "^4.21.1"
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "ts-jest": "^29.2.5",
+    "twilio": "^5.3.5",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "start": "tsc && node dist/app.js",
+    "dev": "nodemon src/app.ts"
   },
   "dependencies": {
-    "twilio": "^5.3.5"
+    "express": "^4.21.1"
   }
 }
